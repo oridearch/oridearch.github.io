@@ -57,7 +57,7 @@ a {
     desktop（デスクトップファーストデザイン）
 -----*/
 
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
 
 	/* Base
 	-------------------------------------*/
@@ -80,7 +80,7 @@ a {
 	-------------------------------------*/
 	#skills {
 		.container {
-			@include flex-direction(row); // スキルボックスを横に並べる
+			@include flex-direction(row);  // スキルボックスを横に並べる
 			justify-content: space-between;
 		}
 		.skill-box {
@@ -268,7 +268,7 @@ section {
 					font-size: 1rem;
 					display: block;
 					margin-bottom: 15px;
-					
+
 				}
 				.button-readmore {
 					margin: auto;
