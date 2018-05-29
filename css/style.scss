@@ -53,77 +53,6 @@ a {
 	text-transform: uppercase;
 }
 
-/*-----
-    desktop（デスクトップファーストデザイン）
------*/
-
-@media (min-width: 768px) {
-
-	/* Base
-	-------------------------------------*/
-	a {
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-
-	/* Header
-	--------------------------------------*/
-	.botton-contact {
-		&:hover, &:active {
-			background-color: $fontColor;
-			color: #FFF;
-		}
-	}
-
-	/* Skills
-	-------------------------------------*/
-	#skills {
-		.container {
-			@include flex-direction(row);  // スキルボックスを横に並べる
-			justify-content: space-between;
-		}
-		.skill-box {
-			margin: 0 10px; // 左右にマージン
-		}
-	}
-
-	// Works
-	#works {
-		.works-box {
-			width: (100% / 3); // widthを33%にして1列に3つ表示（横に並ぶ）
-			a {
-				.works-box-inner {
-					display: none;
-					.button-readmore {
-						&:hover {
-							background-color: darken($keyColor, 10%);
-						}
-					}
-				}
-				&:hover {
-					.works-box-inner {
-						display: block;
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
-
-	// Contact
-	#contact {
-		ul {
-			a {
-				&:hover {
-					background-color: darken($keyColor, 10%);
-				}
-			}
-		}
-	}
-
-}
-
 /* Header
 -------------------------------------*/
 .button-contact {
@@ -338,4 +267,76 @@ footer {
 	padding: 10px 0;
 	text-align: center;
 	color: #FFF;
+}
+
+
+/*-----
+    Desktop design（デスクトップファーストデザイン）
+    最小幅が768px以上の時にDesktop PC用の表示に変更
+-----*/
+
+@media (min-width: 768px) {
+
+	/* Base
+	-------------------------------------*/
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	/* Desktop in Header
+	--------------------------------------*/
+	.botton-contact {
+		&:hover, &:active {
+			background-color: $fontColor;
+			color: #FFF;
+		}
+	}
+
+	/* Skills
+	-------------------------------------*/
+	#skills {
+		.container {
+			@include flex-direction(row);  // スキルボックスを横に並べる
+			justify-content: space-between;
+		}
+		.skill-box {
+			margin: 0 10px; // 左右にマージン
+		}
+	}
+
+	// Works
+	#works {
+		.works-box {
+			width: (100% / 3); // widthを33%にして1列に3つ表示（横に並ぶ）
+			a {
+				.works-box-inner {
+					display: none;
+					.button-readmore {
+						&:hover {
+							background-color: darken($keyColor, 10%);
+						}
+					}
+				}
+				&:hover {
+					.works-box-inner {
+						display: block;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	// Contact
+	#contact {
+		ul {
+			a {
+				&:hover {
+					background-color: darken($keyColor, 10%);
+				}
+			}
+		}
+	}
 }

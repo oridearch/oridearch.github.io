@@ -53,52 +53,6 @@ a:active {
   text-transform: uppercase;
 }
 
-/*-----
-    desktop（デスクトップファーストデザイン）
------*/
-@media (min-width: 768px) {
-  /* Base
-  -------------------------------------*/
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* Header
-  --------------------------------------*/
-  .botton-contact:hover, .botton-contact:active {
-    background-color: #4c4c4c;
-    color: #FFF;
-  }
-
-  /* Skills
-  -------------------------------------*/
-  #skills .container {
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #skills .skill-box {
-    margin: 0 10px;
-  }
-
-  #works .works-box {
-    width: 33.33333%;
-  }
-  #works .works-box a .works-box-inner {
-    display: none;
-  }
-  #works .works-box a .works-box-inner .button-readmore:hover {
-    background-color: #eb8d00;
-  }
-  #works .works-box a:hover .works-box-inner {
-    display: block;
-    width: 100%;
-  }
-
-  #contact ul a:hover {
-    background-color: #eb8d00;
-  }
-}
 /* Header
 -------------------------------------*/
 .button-contact {
@@ -317,6 +271,54 @@ footer {
   padding: 10px 0;
   text-align: center;
   color: #FFF;
+}
+
+/*-----
+    Desktop design（デスクトップファーストデザイン）
+    最小幅が768px以上の時にDesktop PC用の表示に変更
+-----*/
+@media (min-width: 768px) {
+  /* Base
+  -------------------------------------*/
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Desktop in Header
+  --------------------------------------*/
+  .botton-contact:hover, .botton-contact:active {
+    background-color: #4c4c4c;
+    color: #FFF;
+  }
+
+  /* Skills
+  -------------------------------------*/
+  #skills .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #skills .skill-box {
+    margin: 0 10px;
+  }
+
+  #works .works-box {
+    width: 33.33333%;
+  }
+  #works .works-box a .works-box-inner {
+    display: none;
+  }
+  #works .works-box a .works-box-inner .button-readmore:hover {
+    background-color: #eb8d00;
+  }
+  #works .works-box a:hover .works-box-inner {
+    display: block;
+    width: 100%;
+  }
+
+  #contact ul a:hover {
+    background-color: #eb8d00;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
